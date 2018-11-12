@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }    
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.0"
+        classpath "org.jetbrains.intellij.plugins:gradle-intellij-plugin:0.4.0-SNAPSHOT"
+    }
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: "kotlin"
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        google()
+        maven { url "https://mymavenrepo.com/repo/t5CVislt7U0NkjN896IZ/" }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+intellij {
+    version = "183.3975.18"
+    updateSinceUntilBuild = false
+    plugins = ["git4idea", "GitHub"]
+}
+
+//exclude kotlin as its present in the ide libs 
+//we are leaving kotlinx package in as ideal is not currently shipping with corountines 1.0
+dependencies {
+    compile("app.teamhub:core-ide:0.1.0") {
+        exclude group: 'org.jetbrains'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    compile('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0') {
+        exclude group: 'org.jetbrains'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    compile('org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.0.0') {
+        exclude group: 'org.jetbrains'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+}

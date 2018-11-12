@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>app.teamhub</id>
+    <name>TeamHub</name>
+    <vendor email="support@teamhub.app" url="https://www.teamhub.app">TeamHub</vendor>
+    <idea-version since-build="173.*" until-build="184.*"/>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>Git4Idea</depends>
+    <depends optional="true" config-file="github.xml">org.jetbrains.plugins.github</depends>
+
+    <project-components>
+        <component>
+            <interface-class>app.teamhub.ProjectService</interface-class>
+            <implementation-class>app.teamhub.ProjectService</implementation-class>
+            <loadForDefaultProject/>
+        </component>
+    </project-components>
+
+</idea-plugin>
