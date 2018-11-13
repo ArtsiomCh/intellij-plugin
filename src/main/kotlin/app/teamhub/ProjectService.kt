@@ -1,11 +1,8 @@
 package app.teamhub
 
-import app.teamhub.GitHubAccount
 import com.intellij.openapi.components.ProjectComponent
 import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.project.Project
-import app.teamhub.ProjectModel
-import app.teamhub.WorkingCopy
 import com.intellij.credentialStore.CredentialAttributes
 import com.intellij.credentialStore.generateServiceName
 import com.intellij.ide.passwordSafe.PasswordSafe
@@ -24,31 +21,24 @@ import java.net.URL
 
 class ProjectService(private val project: Project) : ProjectComponent {
 
-    companion object {
-        fun getInstance(project: Project): ProjectService {
-            return ServiceManager.getService(project, ProjectService::class.java)
-        }
-    }
-
-    private val model = ProjectModel(GlobalScope.async {
-        val account = GithubAuthenticationManager.getInstance().getSingleOrDefaultAccount(project)
-        (account ?: GithubAuthenticationManager.getInstance().getAccounts().firstOrNull())!!.let { a ->
-            val myId = a.javaClass.getDeclaredField("myId")
-            myId.isAccessible = true
-            val serviceName = generateServiceName(GithubUtil.SERVICE_DISPLAY_NAME, myId.get(a) as String)
-            PasswordSafe.instance.get(CredentialAttributes(serviceName))!!.let {
-                it.getPasswordAsString()!!.let { token -> GitHubAccount(a.server.host, a.name, token) }
+    private val model by lazy {
+        ProjectModel(GlobalScope.async {
+            val account = GithubAuthenticationManager.getInstance().getSingleOrDefaultAccount(project)
+            (account ?: GithubAuthenticationManager.getInstance().getAccounts().firstOrNull())!!.let { a ->
+                val myId = a.javaClass.getDeclaredField("myId")
+                myId.isAccessible = true
+                val serviceName = generateServiceName(GithubUtil.SERVICE_DISPLAY_NAME, myId.get(a) as String)
+                PasswordSafe.instance.get(CredentialAttributes(serviceName))!!.let {
+                    it.getPasswordAsString()!!.let { token -> GitHubAccount(a.server.host, a.name, token) }
+                }
             }
-        }
-    })
-
-    init {
-        model.launch {
-            model.openTeamWindow.openSubscription().consumeEach { TeamWindow(project, model) }
-        }
+        })
     }
 
     override fun projectOpened() {
+        model.launch {
+            model.openTeamWindow.openSubscription().consumeEach { TeamWindow(project, model) }
+        }
         project.messageBus.connect().subscribe(ProjectLevelVcsManager.VCS_CONFIGURATION_CHANGED, VcsListener {
             model.workingCopies = GitRepositoryManager.getInstance(project).repositories.fold(mutableSetOf()) { copies, repo ->
                 GithubGitHelper.getInstance().getAccessibleRemoteUrls(repo).forEach { url ->
