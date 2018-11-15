@@ -35,3 +35,8 @@ Alternatively, you can simply install the [latest release](https://github.com/Te
    - Then select *TeamHubApp/sample-repo* from the URL drop-down list on the *Clone Repository* dialog
    - After the project has loaded you should see the Team window in the bottom left of the IDE
 
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/badge.svg?style=beer-square)](https://beerpay.io/TeamHubApp/intellij-plugin)  [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/make-wish.svg?style=flat-square)](https://beerpay.io/TeamHubApp/intellij-plugin?focus=wish)
