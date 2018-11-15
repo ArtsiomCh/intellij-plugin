@@ -20,7 +20,7 @@ First off, make sure you have [IntelliJ 2018.3 or later](https://www.jetbrains.c
 - If IntelliJ complains about an *Unlinked Gradle Project* then select the option to import it
 - Once imported you can use the *runIde* gradle task to run the project, see [Running TeamHub](#running-teamhub)
 
-Alternatively, you can simply install the latest release of the plugin to see it in action, once downloaded use *Settings/Preferences -> Plugins -> ⚙️ -> Install Plugin from Disk* and then follow the instructions below
+Alternatively, you can simply install the [latest release](https://github.com/TeamHubApp/intellij-plugin/releases) of the plugin to see it in action, once downloaded use *Settings/Preferences -> Plugins -> ⚙️ -> Install Plugin from Disk* and then follow the instructions below
 
 ### Running TeamHub
 
