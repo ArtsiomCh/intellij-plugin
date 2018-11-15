@@ -4,7 +4,7 @@ TeamHub is a realtime collaboration platform for development teams
 
 This plugin utilises the TeamHub SDK to integrate TeamHub into the [Jetbrains IDE family](https://www.jetbrains.com/products.html?fromMenu#type=ide) including [Android Studio](https://developer.android.com/studio/)
 
-## Contributing
+## Contributing [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/badge.svg?style=beer-square)](https://beerpay.io/TeamHubApp/intellij-plugin)  [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/make-wish.svg?style=flat-square)](https://beerpay.io/TeamHubApp/intellij-plugin?focus=wish)
 
 TeamHub needs **you**! We are looking for IntelliJ Platform SDK ninjas to help us implement the IntelliJ plugin, adding new features as they are made available in the TeamHub SDK
 
@@ -34,9 +34,3 @@ Alternatively, you can simply install the [latest release](https://github.com/Te
    - Once accepted sign into GitHub via IntelliJ<br/>*Welcome screen -> Check out from Version Control -> Log in to GitHub*
    - Then select *TeamHubApp/sample-repo* from the URL drop-down list on the *Clone Repository* dialog
    - After the project has loaded you should see the Team window in the bottom left of the IDE
-
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/badge.svg?style=beer-square)](https://beerpay.io/TeamHubApp/intellij-plugin)  [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/make-wish.svg?style=flat-square)](https://beerpay.io/TeamHubApp/intellij-plugin?focus=wish)
