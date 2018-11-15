@@ -1,4 +1,4 @@
-# TeamHub IntelliJ Plugin ![status](https://img.shields.io/badge/status-in%20development%20-red.svg)
+# TeamHub IntelliJ Plugin ![status](https://img.shields.io/badge/status-pre--release-red.svg)  ![GitHub pre-release](https://img.shields.io/github/release-pre/TeamHubApp/intellij-plugin.svg)
 
 TeamHub is a realtime collaboration platform for development teams
 
