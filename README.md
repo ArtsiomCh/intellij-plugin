@@ -4,7 +4,7 @@ TeamHub is a realtime collaboration platform for development teams
 
 This plugin utilises the TeamHub SDK to integrate TeamHub into the [Jetbrains IDE family](https://www.jetbrains.com/products.html?fromMenu#type=ide) including [Android Studio](https://developer.android.com/studio/)
 
-## Contributing [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/badge.svg?style=beer-square)](https://beerpay.io/TeamHubApp/intellij-plugin)  [![Beerpay](https://beerpay.io/TeamHubApp/intellij-plugin/make-wish.svg?style=flat-square)](https://beerpay.io/TeamHubApp/intellij-plugin?focus=wish)
+## Contributing ![Bountysource](https://img.shields.io/bountysource/team/teamhub/activity.svg)
 
 TeamHub needs **you**! We are looking for IntelliJ Platform SDK ninjas to help us implement the IntelliJ plugin, adding new features as they are made available in the TeamHub SDK
 
