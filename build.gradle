@@ -22,9 +22,11 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 intellij {
+    pluginName = 'TeamHub'
     version = "183.3975.18"
     updateSinceUntilBuild = false
     plugins = ["git4idea", "GitHub"]
+    patchPluginXml.version = '0.1.0'
 }
 
 //exclude kotlin as its present in the ide libs 
