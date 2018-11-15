@@ -4,7 +4,7 @@ TeamHub is a realtime collaboration platform for development teams
 
 This plugin utilises the TeamHub SDK to integrate TeamHub into the [Jetbrains IDE family](https://www.jetbrains.com/products.html?fromMenu#type=ide) including [Android Studio](https://developer.android.com/studio/)
 
-## Contributing ![Bountysource](https://img.shields.io/bountysource/team/teamhub/activity.svg)
+## Contributing [![Bountysource](https://img.shields.io/bountysource/team/teamhub/activity.svg)](https://www.bountysource.com/teams/teamhub)
 
 TeamHub needs **you**! We are looking for IntelliJ Platform SDK ninjas to help us implement the IntelliJ plugin, adding new features as they are made available in the TeamHub SDK
 
