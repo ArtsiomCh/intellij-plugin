@@ -1,7 +1,7 @@
 <p align="center">
     <h1 align="center">TeamHub IntelliJ Plugin <a href="https://github.com/TeamHubApp/intellij-plugin/releases"><img src="https://img.shields.io/github/release-pre/TeamHubApp/intellij-plugin.svg" alt="GitHub pre-release"></a> <a href="https://github.com/TeamHubApp/intellij-plugin/releases"><img src="https://img.shields.io/badge/-pre--release-orange.svg" alt="pre-release"></a></h1>
     <p align="center">TeamHub is a realtime collaboration platform for development teams</p>
-    <p align="center">This plugin utilises the TeamHub SDK to integrate TeamHub into the <a href="https://www.jetbrains.com/products.html?fromMenu#type=ide">Jetbrains IDE family</a> including <a href="https://developer.android.com/studio/">Android Studio</a></p>
+    <p align="center">This plugin utilises the [TeamHub SDK](https://developers.teamhub.app/core-ide/v0.1/) to integrate TeamHub into the <a href="https://www.jetbrains.com/products.html?fromMenu#type=ide">Jetbrains IDE family</a> including <a href="https://developer.android.com/studio/">Android Studio</a></p>
     <br>
 </p>
 
