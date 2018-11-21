@@ -1,11 +1,12 @@
 package app.teamhub
 
-import com.intellij.openapi.components.ProjectComponent
-import com.intellij.openapi.components.ServiceManager
-import com.intellij.openapi.project.Project
+import app.teamhub.model.GitHubAccount
+import app.teamhub.model.WorkingCopy
 import com.intellij.credentialStore.CredentialAttributes
 import com.intellij.credentialStore.generateServiceName
 import com.intellij.ide.passwordSafe.PasswordSafe
+import com.intellij.openapi.components.ProjectComponent
+import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.ProjectLevelVcsManager
 import com.intellij.openapi.vcs.VcsListener
 import git4idea.repo.GitRepositoryManager
@@ -37,7 +38,7 @@ class ProjectService(private val project: Project) : ProjectComponent {
 
     override fun projectOpened() {
         model.launch {
-            model.openTeamWindow.openSubscription().consumeEach { TeamWindow(project, model) }
+            model.openTeamWindow.openSubscription().consumeEach { TeamWindow(project, it) }
         }
         project.messageBus.connect().subscribe(ProjectLevelVcsManager.VCS_CONFIGURATION_CHANGED, VcsListener {
             model.workingCopies = GitRepositoryManager.getInstance(project).repositories.fold(mutableSetOf()) { copies, repo ->

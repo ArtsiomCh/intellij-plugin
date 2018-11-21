@@ -1,7 +1,6 @@
 package app.teamhub
 
-import app.teamhub.UserNodeModel
-import app.teamhub.WorkingCopyNodeModel
+import app.teamhub.view.WorkingCopyNodeModel
 import com.intellij.ide.projectView.PresentationData
 import com.intellij.ui.treeStructure.SimpleNode
 import com.intellij.ui.treeStructure.SimpleTree
@@ -9,9 +8,7 @@ import com.intellij.ui.treeStructure.SimpleTreeBuilder
 import icons.Icons
 import icons.withIndicator
 import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
 import java.awt.event.InputEvent
 
 class WorkingCopyNode(
@@ -63,7 +60,7 @@ class WorkingCopyNode(
     }
 
     override fun handleDoubleClickOrEnter(tree: SimpleTree?, inputEvent: InputEvent?) {
-        model.handleSelection()
+//        model.handleSelection()
     }
 
     override fun update(presentation: PresentationData) {

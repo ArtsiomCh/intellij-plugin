@@ -1,7 +1,6 @@
 package app.teamhub
 
-import app.teamhub.UserNodeModel
-import app.teamhub.WorkingCopy
+import app.teamhub.view.UserNodeModel
 import com.intellij.ide.projectView.PresentationData
 import com.intellij.ui.treeStructure.SimpleNode
 import com.intellij.ui.treeStructure.SimpleTreeBuilder
@@ -10,10 +9,7 @@ import icons.fromUrl
 import icons.toSize
 import icons.withIndicator
 import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.channels.zip
-import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
 
 class UserNode(
         private val model: UserNodeModel,

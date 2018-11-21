@@ -1,19 +1,18 @@
 package icons
 
+import com.intellij.execution.runners.ExecutionUtil.getIndicator
+import com.intellij.openapi.util.IconLoader.getIcon
 import com.intellij.ui.Gray
 import com.intellij.ui.JBColor
 import com.intellij.ui.LayeredIcon
 import com.intellij.util.IconUtil
+import com.intellij.util.IconUtil.*
 import com.intellij.util.ui.JBUI
-import javax.imageio.ImageIO
-import javax.swing.*
-import java.awt.*
+import java.awt.Color
 import java.io.IOException
 import java.net.URL
-
-import com.intellij.execution.runners.ExecutionUtil.*
-import com.intellij.util.IconUtil.*
-import com.intellij.openapi.util.IconLoader.*
+import javax.imageio.ImageIO
+import javax.swing.*
 
 interface Icons {
     companion object {

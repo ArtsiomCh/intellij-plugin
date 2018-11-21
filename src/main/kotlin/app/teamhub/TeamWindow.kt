@@ -1,7 +1,6 @@
 package app.teamhub
 
-import app.teamhub.ProjectModel
-import app.teamhub.TeamWindowModel
+import app.teamhub.view.TeamWindowModel
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindowAnchor
 import com.intellij.openapi.wm.ToolWindowManager
@@ -14,9 +13,7 @@ import icons.withIndicator
 import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.launch
 
-class TeamWindow(project: Project, parentModel: ProjectModel) {
-
-    private val model = TeamWindowModel(parentModel)
+class TeamWindow(project: Project, private val model: TeamWindowModel) {
 
     private val windowId = "Team"
 
