@@ -32,7 +32,7 @@ intellij {
 //exclude kotlin as its present in the ide libs 
 //we are leaving kotlinx package in as ideal is not currently shipping with corountines 1.0
 dependencies {
-    compile("app.teamhub:core-ide:0.1.0") {
+    compile("app.teamhub:core-ide:0.1.1") {
         exclude group: 'org.jetbrains'
         exclude group: 'org.jetbrains.kotlin'
     }
