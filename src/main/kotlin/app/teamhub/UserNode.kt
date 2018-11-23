@@ -19,7 +19,7 @@ class UserNode(
     private var children = emptyList<WorkingCopyNode>()
 
     private var title = ""
-    private var iconUrl = ""
+    private var iconUrl: String? = null
     private var indicateOnline = false
 
     init {
