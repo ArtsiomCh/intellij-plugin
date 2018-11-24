@@ -15,7 +15,7 @@ If you don't have any prior experience of the IntelliJ Platform but maybe you ar
 
 ### Getting Started
 
-First off, make sure you have [IntelliJ 2018.3 or later](https://www.jetbrains.com/idea/nextversion/) installed
+First off, make sure you have [IntelliJ 2018.3 or later](https://www.jetbrains.com/idea/download) installed
 
 - Import the intellij-plugin gradle project into IntelliJ using *Check out from Version Control* or *Import project* if you have already cloned the repo
 - If IntelliJ complains about an *Unlinked Gradle Project* then select the option to import it
