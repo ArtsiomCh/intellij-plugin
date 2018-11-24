@@ -5,7 +5,7 @@
     <br>
 </p>
 
-## Contributing [![Bountysource](https://img.shields.io/bountysource/team/teamhub/activity.svg)](https://www.bountysource.com/teams/teamhub)
+## Contributing [![bounties available](https://img.shields.io/badge/bounties-available-brightgreen.svg)](https://github.com/TeamHubApp/intellij-plugin/issues)
 
 TeamHub needs **you**! We are looking for IntelliJ Platform SDK ninjas to help us implement the IntelliJ plugin, adding new features as they are made available in the TeamHub SDK
 
